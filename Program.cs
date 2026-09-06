@@ -79,6 +79,19 @@
             //Console.WriteLine("---Price Labels---");
             //Product.TransformProducts(Catalog, product => $"{product.Name}: {(product.Price > 100 ? "Expensive!" : "Affordable")}");
             #endregion
+
+            #region 3.3. Filter Products
+            /*
+            Write a method called FilterProducts that accepts the product list and a
+            Predicate. The method returns a List of products that match the condition.
+
+            Scenario 5 Low-Stock Alert: Find products with Stock < 20 and print an alert
+            for each in the format: [LOW STOCK] Name: only X left!
+             */
+
+            //Console.WriteLine("---Low-Stock Alert---");
+            //Product.FilterProducts(Catalog, product => product.Stock < 20); // Low-Stock Alert
+            #endregion
             #endregion
         }
     }

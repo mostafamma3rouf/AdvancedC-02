@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace AdvancedC_02
 {
@@ -53,6 +55,25 @@ namespace AdvancedC_02
             {
                 string transformed = transformFunction(product);
                 Console.WriteLine(transformed);
+            }
+        }
+
+        // Write a method called FilterProducts that accepts the product list and
+        // a Predicate.The method returns a List of products that match the condition.
+        public static void FilterProducts(List<Product> products, Predicate<Product> filter)
+        {
+            List<Product> filteredProducts = new List<Product>();
+            foreach (Product product in products)
+            {
+                if (filter(product))
+                {
+                    filteredProducts.Add(product);
+                }
+            }
+            // Display the filtered products
+            foreach (Product product in filteredProducts)
+            {
+                Console.WriteLine($"[LOW STOCK] {product.Name} - only {product.Stock} left!");
             }
         }
     }
