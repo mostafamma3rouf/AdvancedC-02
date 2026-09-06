@@ -62,6 +62,23 @@
             //Console.WriteLine("---Detailed Report---");
             //Product.PrintReport(Catalog, product => Console.WriteLine($"[{product.Category}] {product.Name} | Price: ${product.Price} | Stock: {product.Stock}")); // Detailed Report
             #endregion
+
+            #region 3.2. Transform Products
+            /*
+             * Write a method called TransformProducts that accepts the product list and a Func.
+                The method returns a List by applying the function to each product.
+                Scenario 3 Summary List: Transform each product into a string like "Laptop
+                ($1200)". Print all results.
+                Scenario 4 Price Label: Transform each product into "Expensive!" if Price >
+                $100, or "Affordable" otherwise. Print each as Name: Label.
+             */
+
+            //Console.WriteLine("---Summary List---");
+            //Product.TransformProducts(Catalog, product => $"{product.Name} (${product.Price})");
+            //Console.WriteLine();
+            //Console.WriteLine("---Price Labels---");
+            //Product.TransformProducts(Catalog, product => $"{product.Name}: {(product.Price > 100 ? "Expensive!" : "Affordable")}");
+            #endregion
             #endregion
         }
     }

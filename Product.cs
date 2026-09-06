@@ -45,5 +45,15 @@ namespace AdvancedC_02
                 reportAction(product);
             }
         }
+
+        // Write a method called TransformProducts that accepts the product list and a Func.
+        public static void TransformProducts(List<Product> products, Func<Product, string> transformFunction)
+        {
+            foreach (Product product in products)
+            {
+                string transformed = transformFunction(product);
+                Console.WriteLine(transformed);
+            }
+        }
     }
 }
