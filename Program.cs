@@ -42,6 +42,27 @@
             //Console.WriteLine("---Clothing under $100---");
             //Product.SearchProducts(Catalog, pro => pro.Category == "Clothing" && pro.Price < 100); //Clothing products under $100
             #endregion
+
+            #region Task 03 : Custom Report Generator
+            /*
+             Manager: "We need different reports from the same data - a quick summary,
+             a detailed breakdown, a low-stock alert. Build one reporting engine where
+             the caller controls the format. Use the built-in delegates this time."
+             */
+            #region 3.1 Print Reports
+            /*
+            The caller decides what to print by passing a lambda.
+            Scenario 1 Short Report: Print each product as Name - $Price
+            Scenario 2 Detailed Report: Print each product as [Category] Name | Price: $X | Stock: Y
+             */
+
+            //Console.WriteLine("---Short Report---");
+            //Product.PrintReport(Catalog, product => Console.WriteLine($"{product.Name} - ${product.Price}")); // Short Report
+            //Console.WriteLine();
+            //Console.WriteLine("---Detailed Report---");
+            //Product.PrintReport(Catalog, product => Console.WriteLine($"[{product.Category}] {product.Name} | Price: ${product.Price} | Stock: {product.Stock}")); // Detailed Report
+            #endregion
+            #endregion
         }
     }
 }

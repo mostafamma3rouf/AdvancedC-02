@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace AdvancedC_02
@@ -32,6 +33,16 @@ namespace AdvancedC_02
             foreach (Product product in filteredProducts)
             {
                 Console.WriteLine($"{product.Name} - ${product.Price} (Stock: {product.Stock})");
+            }
+        }
+
+        //Write a method called PrintReport that accepts the product list and an Action.
+        public static void PrintReport(List<Product> products, Action<Product> reportAction)
+        {
+            // loops through all products and calls the action on each one
+            foreach (Product product in products)
+            {
+                reportAction(product);
             }
         }
     }
